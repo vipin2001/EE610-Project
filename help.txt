@@ -1,0 +1,11 @@
+usage: EE 610 Project [-h] [--image i] [--convert c] [--model m] [--mode md]
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --image i    Takes in path to input image file
+  --convert c  Converts image to canine vision space (default is True)
+  --model m    Enter either of
+                       [1] d   : DenseNet
+                       [2] r   : ResNet
+                       [3] e   : EfficientNet
+  --mode md    Choose if you want the Lp mode or Sp mode. Default is Lp

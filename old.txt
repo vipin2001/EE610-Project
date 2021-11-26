@@ -1,0 +1,26 @@
+Resnet: clf = nn.Sequential(OrderedDict([('Fully_Connected_Layer_1', nn.Linear(2048, 512)),
+                                 ('ReLU_1', nn.ReLU()),
+                                 ('Fully_Connected_Layer_2', nn.Linear(512, 256)),
+                                 ('ReLU_3', nn.ReLU()),
+                                 ('Fully_Connected_Layer_3', nn.Linear(256, 2)),
+                                 ('Output', nn.LogSoftmax(dim=1))]))
+
+
+Densenet: clf = nn.Sequential(OrderedDict([('Fully_Connected_Layer_1', nn.Linear(1024, 512)),
+                                 ('ReLU_1', nn.ReLU()),
+                                 ('Fully_Connected_Layer_2', nn.Linear(512, 256)),
+                                 ('ReLU_3', nn.ReLU()),
+                                 ('Fully_Connected_Layer_3', nn.Linear(256, 2)),
+                                 ('Output', nn.LogSoftmax(dim=1))]))
+
+
+Efficientnet: clf = nn.Sequential(OrderedDict([('Dropout_1', nn.Dropout(p=0.2, inplace=True)),
+                                 ('Fully_Connected_Layer_1', nn.Linear(1280, 512)),
+                                 ('ReLU_1', nn.ReLU()),
+                                 ('Fully_Connected_Layer_2', nn.Linear(512, 256)),
+                                 ('ReLU_3', nn.ReLU()),
+                                 ('Fully_Connected_Layer_3', nn.Linear(256, 2)),
+                                 ('Output', nn.LogSoftmax(dim=1))]))
+
+train_transforms = transforms.Compose([transforms.RandomResizedCrop(224), transforms.ToTensor()])
+test_transforms = transforms.Compose([transforms.Resize(255), transforms.CenterCrop(224), transforms.ToTensor()])

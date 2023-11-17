@@ -13,7 +13,7 @@ Slides: Slides.pdf
 #### First clone the repository using
 
 ```http
-  git clone https://github.com/EeshaanJain/EE610-Project
+  git clone https://github.com/vipin2001/EE610-Project.git
 ```
 #### Now to install the required python packages
 
